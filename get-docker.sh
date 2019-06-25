@@ -24,7 +24,7 @@ SCRIPT_COMMIT_SHA=2f4ae48
 #   * test
 #   * stable
 #   * edge (deprecated)
-DEFAULT_CHANNEL_VALUE="nightly"
+DEFAULT_CHANNEL_VALUE="stable"
 if [ -z "$CHANNEL" ]; then
 	CHANNEL=$DEFAULT_CHANNEL_VALUE
 fi
