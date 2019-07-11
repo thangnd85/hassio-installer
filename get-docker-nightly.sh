@@ -24,7 +24,7 @@ SCRIPT_COMMIT_SHA=2f4ae48
 #   * test
 #   * stable
 #   * edge (deprecated)
-DEFAULT_CHANNEL_VALUE="stable"
+DEFAULT_CHANNEL_VALUE="nightly"
 if [ -z "$CHANNEL" ]; then
 	CHANNEL=$DEFAULT_CHANNEL_VALUE
 fi
@@ -292,7 +292,7 @@ do_install() {
 			dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 			case "$dist_version" in
 				10)
-					dist_version="stretch"
+					dist_version="buster"
 				;;
 				9)
 					dist_version="stretch"
