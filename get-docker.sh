@@ -16,7 +16,7 @@ set -e
 #
 # Git commit from https://github.com/docker/docker-install when
 # the script was uploaded (Should only be modified by upload job):
-SCRIPT_COMMIT_SHA=2f4ae48
+SCRIPT_COMMIT_SHA="6bf300318ebaab958c4adc341a8c7bb9f3a54a1a"
 
 
 # The channel to install from:
@@ -24,7 +24,7 @@ SCRIPT_COMMIT_SHA=2f4ae48
 #   * test
 #   * stable
 #   * edge (deprecated)
-DEFAULT_CHANNEL_VALUE="stable"
+DEFAULT_CHANNEL_VALUE="nightly"
 if [ -z "$CHANNEL" ]; then
 	CHANNEL=$DEFAULT_CHANNEL_VALUE
 fi
@@ -173,6 +173,9 @@ check_forked() {
 				fi
 				dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 				case "$dist_version" in
+					10)
+						dist_version="buster"
+					;;
 					9)
 						dist_version="stretch"
 					;;
@@ -292,7 +295,7 @@ do_install() {
 			dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 			case "$dist_version" in
 				10)
-					dist_version="stretch"
+					dist_version="buster"
 				;;
 				9)
 					dist_version="stretch"
