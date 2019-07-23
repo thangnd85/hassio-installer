@@ -24,7 +24,7 @@ SCRIPT_COMMIT_SHA="6bf300318ebaab958c4adc341a8c7bb9f3a54a1a"
 #   * test
 #   * stable
 #   * edge (deprecated)
-DEFAULT_CHANNEL_VALUE="nightly"
+DEFAULT_CHANNEL_VALUE="stable"
 if [ -z "$CHANNEL" ]; then
 	CHANNEL=$DEFAULT_CHANNEL_VALUE
 fi
@@ -174,7 +174,7 @@ check_forked() {
 				dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 				case "$dist_version" in
 					10)
-						dist_version="buster"
+						dist_version="stretch"
 					;;
 					9)
 						dist_version="stretch"
@@ -295,7 +295,7 @@ do_install() {
 			dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 			case "$dist_version" in
 				10)
-					dist_version="buster"
+					dist_version="stretch"
 				;;
 				9)
 					dist_version="stretch"
