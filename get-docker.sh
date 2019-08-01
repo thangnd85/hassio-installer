@@ -174,7 +174,7 @@ check_forked() {
 				dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 				case "$dist_version" in
 					10)
-						dist_version="stretch"
+						dist_version="buster"
 					;;
 					9)
 						dist_version="stretch"
@@ -295,7 +295,7 @@ do_install() {
 			dist_version="$(sed 's/\/.*//' /etc/debian_version | sed 's/\..*//')"
 			case "$dist_version" in
 				10)
-					dist_version="stretch"
+					dist_version="buster"
 				;;
 				9)
 					dist_version="stretch"
