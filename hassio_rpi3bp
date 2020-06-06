@@ -71,7 +71,7 @@ install_docker() {
 # ------------------------------------------------------------------------------
 install_hassio() {
   echo "Installing Hass.io..."
-  curl -sL "${HASSIO_INSTALLER}" | bash -s -- -m raspberrypi3 -d /home/pi/hassio
+  curl -sL "${HASSIO_INSTALLER}" | bash -s -- -m raspberrypi3 -d $HOME/hassio
 }
 
 # ------------------------------------------------------------------------------
