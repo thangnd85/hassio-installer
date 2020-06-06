@@ -60,7 +60,7 @@ install_requirements() {
 # ------------------------------------------------------------------------------
 # Installs the Docker engine
 # ------------------------------------------------------------------------------
-#install_docker() {
+install_docker() {
   echo "Installing Docker..."
 #  curl -sSL https://raw.githubusercontent.com/thangnd85/hassio-installer/master/get-docker.sh | sh
 #  curl -sSL https://get.docker.com | sh
